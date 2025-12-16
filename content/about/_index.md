@@ -1,5 +1,5 @@
 ---
-title: "About Gunslaw"
+title: "About"
 ---
 
 Gunslaw is led by an attorney with extensive experience in public service, prosecution, and military leadership. With a career spanning state and county prosecution, appellate-level advocacy, and service as a commissioned officer in the United States Air Force, the firm brings disciplined judgment, courtroom experience, and a deep understanding of the justice system to every case.

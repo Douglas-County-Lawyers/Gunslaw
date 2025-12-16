@@ -2,9 +2,9 @@
   <div class="footer-inner">
 
     <div class="footer-brand">
-      <img src="/images/logo/logo-full.png" alt="Gunslaw logo" class="footer-logo">
+      <img src="/images/logo/logo-full.png" alt="{{ .Site.Params.firmName }} logo" class="footer-logo">
       <p class="footer-tagline">
-        Trusted legal representation serving Douglas County, Nevada.
+        {{ .Site.Params.tagline }}
       </p>
     </div>
 
@@ -13,25 +13,23 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <p>
-          Phone: (XXX) XXX-XXXX<br>
-          Email: <a href="mailto:contact@gunslaw.com">contact@gunslaw.com</a><br>
-          Douglas County, Nevada
+          Phone: {{ .Site.Params.phone }}<br>
+          Email: <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>
+          {{ .Site.Params.location }}
         </p>
       </div>
-
 
       <div class="footer-col">
         <h4>Important Notice</h4>
         <p class="footer-disclaimer">
-          This website is for informational purposes only and does not constitute legal advice.
-          Viewing or contacting Gunslaw does not create an attorney-client relationship.
+          {{ .Site.Params.disclaimer }}
         </p>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <p>© {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+      <p>© {{ now.Year }} {{ .Site.Params.firmName }}. All rights reserved.</p>
     </div>
 
   </div>

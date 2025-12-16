@@ -1,17 +1,16 @@
 {{ define "main" }}
 
 <div class="page">
-  <h1>{{ .Title }}</h1>
+  <h1>About {{ .Site.Params.firmName }}</h1>
 
   <div class="about-wrapper">
     <div class="about-grid">
 
       <div class="about-photo">
         <img src="/images/headshot.jpg" alt="Attorney headshot">
-        <p class="about-name">Jason Gunnell</p>
+        <p class="about-name">{{ .Site.Params.attorneyName }}</p>
         <p class="about-title">
-          Senior Deputy District Attorney<br>
-          Staff Judge Advocate, USAF Reserve
+          {{ range $index, $title := .Site.Params.attorneyTitles }}{{ if $index }}<br>{{ end }}{{ $title }}{{ end }}
         </p>
       </div>
 

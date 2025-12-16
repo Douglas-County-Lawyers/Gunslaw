@@ -140,23 +140,6 @@ body {
   padding: 60px 20px;
 }
 
-.page h1 {
-  text-align: center;
-  color: var(--primary);
-  margin-bottom: 24px;
-  font-size: 2.2rem;
-}
-
-.page h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--accent);
-  margin: 16px auto 0;
-}
-
-
 .page p {
   margin-bottom: 16px;
 }
@@ -184,6 +167,7 @@ body {
   text-align: center;
   color: var(--primary);
   margin-bottom: 24px;
+  font-size: 2.2rem;
 }
 
 .site-content h1::after {
@@ -248,18 +232,26 @@ body {
    CONTACT PAGE
 ========================================================= */
 
-.contact-list {
-  list-style: none;
-  padding: 0;
+.contact-info {
+  margin: 32px 0;
 }
 
-.contact-list li {
-  margin-bottom: 20px;
+.contact-info p {
+  margin-bottom: 24px;
 }
 
-.contact-list strong {
+.contact-info strong {
   display: block;
   color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.contact-disclaimer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 16px;
 }
 
 
