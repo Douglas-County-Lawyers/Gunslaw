@@ -7,7 +7,7 @@ title: "Contact Gunslaw"
 If you would like to discuss a legal matter or schedule a consultation, please contact the office using the information below.
 
 **Phone**  
-(XXX) XXX-XXXX  
+(123) 456-7890
 
 **Email**  
 [contact@gunslaw.com](mailto:contact@gunslaw.com)
