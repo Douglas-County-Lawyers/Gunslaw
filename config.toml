@@ -1,0 +1,14 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Gunslaw"
+
+[params]
+  primaryColor = "#0F172A"
+  accentColor  = "#C9B037"
+  textColor    = "#1A1A1A"
+  lightGray    = "#F6F3E7"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Gunslaw</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Gunslaw</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact Gunslaw</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;h2 id=&#34;get-in-touch&#34;&gt;Get in Touch&lt;/h2&gt;&#xA;&lt;p&gt;If you would like to discuss a legal matter or schedule a consultation, please contact the office using the information below.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Phone&lt;/strong&gt;&lt;br&gt;&#xA;(XXX) XXX-XXXX&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Email&lt;/strong&gt;&lt;br&gt;&#xA;&lt;a href=&#34;mailto:contact@gunslaw.com&#34;&gt;contact@gunslaw.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;&lt;br&gt;&#xA;Douglas County, Nevada&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;Communications through this website do not establish an attorney-client relationship. Please do not send confidential information until such a relationship has been formally established.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
