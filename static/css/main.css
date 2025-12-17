@@ -250,6 +250,35 @@ section {
   color: #fff;
 }
 
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.25);
+}
+.hero-box {
+  max-width: 560px;
+  padding: 2.25rem 2.75rem;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.hero-box h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.hero-box p {
+  font-size: 1.05rem;
+  color: #333;
+  opacity: 0.9;
+}
+.cta {
+  padding: 12px 28px;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #d4af37; /* softer gold */
+}
+
+
 
 /* =========================================================
    ABOUT SECTION
