@@ -47,6 +47,12 @@ title = "Gunslaw"
   state  = "NV"
   zip    = "89423"
 
+[params.po_box]
+  line = "P.O. Box 1234"
+  city = "Minden"
+  state = "NV"
+  zip = "89423"
+
 
 [markup]
   [markup.goldmark]

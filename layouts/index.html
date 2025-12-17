@@ -6,7 +6,9 @@
   <div class="hero-inner hero-box">
     <h1>{{ .Site.Params.heroHeading }}</h1>
     <p>{{ .Site.Params.heroDescription }}</p>
-    <a class="cta" href="{{ .Site.Params.ctaLink }}">{{ .Site.Params.ctaText }}</a>
+    <a class="cta" href="{{ .Site.Params.ctaLink }}">
+      {{ .Site.Params.ctaText }}
+    </a>
   </div>
 </section>
 
@@ -14,13 +16,19 @@
 <section id="about" class="section section-about">
   <div class="section-inner">
     <h2>About {{ .Site.Params.firmName }}</h2>
-    
+
     <div class="about-grid">
       <div class="about-photo">
-        <img src="/images/headshot.jpg" alt="{{ .Site.Params.attorneyName }} - Attorney">
+        <img
+          src="/images/headshot.jpg"
+          alt="{{ .Site.Params.attorneyName }} – Attorney"
+          loading="lazy"
+        >
         <p class="about-name">{{ .Site.Params.attorneyName }}</p>
         <p class="about-title">
-          {{ range $index, $title := .Site.Params.attorneyTitles }}{{ if $index }}<br>{{ end }}{{ $title }}{{ end }}
+          {{ range $index, $title := .Site.Params.attorneyTitles }}
+            {{ if $index }}<br>{{ end }}{{ $title }}
+          {{ end }}
         </p>
       </div>
 
@@ -37,33 +45,78 @@
 {{/* ===== CONTACT SECTION ===== */}}
 <section id="contact" class="section section-contact">
   <div class="section-inner">
-    <h2>Contact {{ .Site.Params.firmName }}</h2>
-    
-    <p class="contact-intro">{{ .Site.Params.contactIntro }}</p>
 
-    <div class="contact-details">
-      <div class="contact-item">
-        <strong>Phone</strong>
-        <p>{{ .Site.Params.phone }}</p>
-      </div>
+    <div class="contact-layout">
 
-      <div class="contact-item">
-        <strong>Email</strong>
-        <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
-      </div>
+      <!-- LEFT: CONTACT CARD -->
+      <div class="contact-card">
+        <h2>Contact {{ .Site.Params.firmName }}</h2>
 
-      <div class="contact-item">
-        <strong>Location</strong>
-        <p>
-          {{ .Site.Params.address.street }}<br>
-          {{ .Site.Params.address.city }}, {{ .Site.Params.address.state }} {{ .Site.Params.address.zip }}
+        <p class="contact-intro">
+          {{ .Site.Params.contactIntro }}
+        </p>
+
+        <div class="contact-grid">
+
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <a href="tel:{{ .Site.Params.phone | urlize }}">
+              {{ .Site.Params.phone }}
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <h3>Email</h3>
+            <a href="mailto:{{ .Site.Params.email }}">
+              {{ .Site.Params.email }}
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <h3>Office Location</h3>
+            <p>
+              {{ .Site.Params.address.street }}<br>
+              {{ .Site.Params.address.city }}, {{ .Site.Params.address.state }}
+              {{ .Site.Params.address.zip }}
+            </p>
+          </div>
+
+          {{ with .Site.Params.po_box }}
+          <div class="contact-item">
+            <h3>Mailing Address</h3>
+            <p>
+              {{ .line }}<br>
+              {{ .city }}, {{ .state }} {{ .zip }}
+            </p>
+          </div>
+          {{ end }}
+
+        </div>
+
+        <p class="contact-disclaimer">
+          {{ .Site.Params.contactDisclaimer }}
         </p>
       </div>
+
+      <!-- RIGHT: IMAGE STACK -->
+      <div class="contact-images">
+        <img
+          src="/images/desk.png"
+          alt="Gunslaw office desk"
+          class="img-primary"
+          loading="lazy"
+        >
+
+        <img
+          src="/images/contact-photo.jpg"
+          alt="Gunslaw office waiting area"
+          class="img-secondary"
+          loading="lazy"
+        >
+      </div>
+
     </div>
 
-    <p class="contact-disclaimer">
-      <em>{{ .Site.Params.contactDisclaimer }}</em>
-    </p>
   </div>
 </section>
 

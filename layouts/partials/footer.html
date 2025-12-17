@@ -1,35 +1,19 @@
 <footer class="footer">
   <div class="footer-inner">
 
-    <div class="footer-brand">
-      <img src="/images/logo/logo-full.png" alt="{{ .Site.Params.firmName }} logo" class="footer-logo">
-      <p class="footer-tagline">
-        {{ .Site.Params.tagline }}
-      </p>
-    </div>
-
-    <div class="footer-columns">
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>
-          Phone: {{ .Site.Params.phone }}<br>
-          Email: <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>
-          {{ .Site.Params.location }}
-        </p>
+    <div class="footer-main">
+      <div class="footer-logo-wrap">
+        <img
+          src="/images/logo/logo-full.png"
+          alt="{{ .Site.Params.firmName }} logo"
+          class="footer-logo"
+        />
       </div>
 
-      <div class="footer-col">
-        <h4>Important Notice</h4>
-        <p class="footer-disclaimer">
-          {{ .Site.Params.disclaimer }}
-        </p>
-      </div>
-
+      <div class="footer-divider"></div>
     </div>
-
     <div class="footer-bottom">
-      <p>© {{ now.Year }} {{ .Site.Params.firmName }}. All rights reserved.</p>
+      © {{ now.Year }} Gunslaw. All rights reserved.
     </div>
 
   </div>

@@ -23,16 +23,14 @@
 <body class="site">
   <header class="nav">
   <div class="nav-inner">
-    <div class="logo">
-      <a href="/#hero">
-        <img src="/images/logo/logo-horizontal.png" alt="Gunslaw logo">
-      </a>
-    </div>
+    <a href="#hero" class="nav-logo">
+      <img src="/images/logo/logo-horizontal.png" alt="Gunslaw">
+    </a>
 
-    <nav>
-      <a href="/#hero">Home</a>
-      <a href="/#about">About Us</a>
-      <a href="/#contact">Contact</a>
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -47,7 +45,9 @@
   <div class="hero-inner hero-box">
     <h1>Trusted Legal Representation</h1>
     <p>Serving Douglas County with clarity, integrity, and experience.</p>
-    <a class="cta" href="#contact">Request a Consultation</a>
+    <a class="cta" href="#contact">
+      Request a Consultation
+    </a>
   </div>
 </section>
 
@@ -55,13 +55,21 @@
 <section id="about" class="section section-about">
   <div class="section-inner">
     <h2>About Gunslaw</h2>
-    
+
     <div class="about-grid">
       <div class="about-photo">
-        <img src="/images/headshot.jpg" alt="Jason Gunnell - Attorney">
+        <img
+          src="/images/headshot.jpg"
+          alt="Jason Gunnell – Attorney"
+          loading="lazy"
+        >
         <p class="about-name">Jason Gunnell</p>
         <p class="about-title">
-          Trial Lawyer<br>Staff Judge Advocate, USAF Reserve
+          
+            Trial Lawyer
+          
+            <br>Staff Judge Advocate, USAF Reserve
+          
         </p>
       </div>
 
@@ -78,33 +86,78 @@
 
 <section id="contact" class="section section-contact">
   <div class="section-inner">
-    <h2>Contact Gunslaw</h2>
-    
-    <p class="contact-intro">If you would like to discuss a legal matter or schedule a consultation, click the email address below to send us an email, or contact the office using the information provided.</p>
 
-    <div class="contact-details">
-      <div class="contact-item">
-        <strong>Phone</strong>
-        <p>(000) 000-0000</p>
-      </div>
+    <div class="contact-layout">
 
-      <div class="contact-item">
-        <strong>Email</strong>
-        <p><a href="mailto:jason@gunslaw.com%20">jason@gunslaw.com </a></p>
-      </div>
+      
+      <div class="contact-card">
+        <h2>Contact Gunslaw</h2>
 
-      <div class="contact-item">
-        <strong>Location</strong>
-        <p>
-          1701 County Road, # D<br>
-          Minden, NV 89423
+        <p class="contact-intro">
+          If you would like to discuss a legal matter or schedule a consultation, click the email address below to send us an email, or contact the office using the information provided.
+        </p>
+
+        <div class="contact-grid">
+
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <a href="tel:000-000-0000">
+              (000) 000-0000
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <h3>Email</h3>
+            <a href="mailto:jason@gunslaw.com%20">
+              jason@gunslaw.com 
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <h3>Office Location</h3>
+            <p>
+              1701 County Road, # D<br>
+              Minden, NV
+              89423
+            </p>
+          </div>
+
+          
+          <div class="contact-item">
+            <h3>Mailing Address</h3>
+            <p>
+              P.O. Box 1234<br>
+              Minden, NV 89423
+            </p>
+          </div>
+          
+
+        </div>
+
+        <p class="contact-disclaimer">
+          Communications through this website do not establish an attorney-client relationship. Please do not send confidential information until such a relationship has been formally established.
         </p>
       </div>
+
+      
+      <div class="contact-images">
+        <img
+          src="/images/desk.png"
+          alt="Gunslaw office desk"
+          class="img-primary"
+          loading="lazy"
+        >
+
+        <img
+          src="/images/contact-photo.jpg"
+          alt="Gunslaw office waiting area"
+          class="img-secondary"
+          loading="lazy"
+        >
+      </div>
+
     </div>
 
-    <p class="contact-disclaimer">
-      <em>Communications through this website do not establish an attorney-client relationship. Please do not send confidential information until such a relationship has been formally established.</em>
-    </p>
   </div>
 </section>
 
@@ -114,39 +167,22 @@
   <footer class="footer">
   <div class="footer-inner">
 
-    <div class="footer-brand">
-      <img src="/images/logo/logo-full.png" alt="Gunslaw logo" class="footer-logo">
-      <p class="footer-tagline">
-        Trusted legal representation serving Douglas County, Nevada.
-      </p>
-    </div>
-
-    <div class="footer-columns">
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>
-          Phone: (000) 000-0000<br>
-          Email: <a href="mailto:jason@gunslaw.com%20">jason@gunslaw.com </a><br>
-          
-        </p>
+    <div class="footer-main">
+      <div class="footer-logo-wrap">
+        <img
+          src="/images/logo/logo-full.png"
+          alt="Gunslaw logo"
+          class="footer-logo"
+        />
       </div>
 
-      <div class="footer-col">
-        <h4>Important Notice</h4>
-        <p class="footer-disclaimer">
-          This website is for informational purposes only and does not constitute legal advice. Viewing or contacting Gunslaw does not create an attorney-client relationship.
-        </p>
-      </div>
-
+      <div class="footer-divider"></div>
     </div>
-
     <div class="footer-bottom">
-      <p>© 2025 Gunslaw. All rights reserved.</p>
+      © 2025 Gunslaw. All rights reserved.
     </div>
 
   </div>
 </footer>
-
 </body>
 </html>
