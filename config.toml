@@ -12,15 +12,15 @@ title = "Gunslaw"
   # Firm Information
   firmName = "Gunslaw"
   tagline = "Trusted legal representation serving Douglas County, Nevada."
-  location = "Douglas County, Nevada"
+
   
   # Contact Information
   phone = "(000) 000-0000"
-  email = "contact@gunslaw.com "
+  email = "jason@gunslaw.com "
   
   # Attorney Informationc
   attorneyName = "Jason Gunnell"
-  attorneyTitles = ["Senior Deputy District Attorney", "Staff Judge Advocate, USAF Reserve"]
+  attorneyTitles = ["Trial Lawyer", "Staff Judge Advocate, USAF Reserve"]
   
   # Hero Section
   heroHeading = "Trusted Legal Representation"
@@ -31,6 +31,13 @@ title = "Gunslaw"
   # Legal Disclaimer
   disclaimer = "This website is for informational purposes only and does not constitute legal advice. Viewing or contacting Gunslaw does not create an attorney-client relationship."
   contactDisclaimer = "Communications through this website do not establish an attorney-client relationship. Please do not send confidential information until such a relationship has been formally established."
+
+[params.address]
+  street = "1701 County Road, # D"
+  city   = "Minden"
+  state  = "NV"
+  zip    = "89423"
+
 
 [markup]
   [markup.goldmark]

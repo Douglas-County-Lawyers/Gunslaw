@@ -11,8 +11,12 @@
     <p><strong>Email</strong><br>
     <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
 
-    <p><strong>Location</strong><br>
-    {{ .Site.Params.location }}</p>
+      <p>
+    <strong>Location</strong><br>
+    {{ .Site.Params.address.street }}<br>
+    {{ .Site.Params.address.city }}, {{ .Site.Params.address.state }} {{ .Site.Params.address.zip }}
+  </p>
+
   </div>
 
   <p class="contact-disclaimer">

@@ -2,11 +2,9 @@
 <section class="hero hero-bg">
   <div class="hero-overlay"></div>
 
-  <div class="hero-inner">
+  <div class="hero-inner hero-box">
     <h1>{{ .Site.Params.heroHeading }}</h1>
-    <p>
-      {{ .Site.Params.heroDescription }}
-    </p>
+    <p>{{ .Site.Params.heroDescription }}</p>
     <a class="cta" href="{{ .Site.Params.ctaLink }}">{{ .Site.Params.ctaText }}</a>
   </div>
 </section>

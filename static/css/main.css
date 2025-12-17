@@ -332,6 +332,48 @@ body {
 }
 
 
+.hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Darken background image slightly */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Content container */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* The actual box */
+.hero-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem 4rem;
+  max-width: 720px;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.hero-box h1 {
+  margin-bottom: 1rem;
+}
+
+.hero-box p {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+
 /* =========================================================
    MOBILE
 ========================================================= */
