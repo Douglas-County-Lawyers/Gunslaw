@@ -1,12 +1,70 @@
 {{ define "main" }}
-<section class="hero hero-bg">
-  <div class="hero-overlay"></div>
 
+{{/* ===== HERO SECTION ===== */}}
+<section id="hero" class="hero hero-bg">
+  <div class="hero-overlay"></div>
   <div class="hero-inner hero-box">
     <h1>{{ .Site.Params.heroHeading }}</h1>
     <p>{{ .Site.Params.heroDescription }}</p>
     <a class="cta" href="{{ .Site.Params.ctaLink }}">{{ .Site.Params.ctaText }}</a>
   </div>
 </section>
-{{ end }}
 
+{{/* ===== ABOUT SECTION ===== */}}
+<section id="about" class="section section-about">
+  <div class="section-inner">
+    <h2>About {{ .Site.Params.firmName }}</h2>
+    
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="/images/headshot.jpg" alt="{{ .Site.Params.attorneyName }} - Attorney">
+        <p class="about-name">{{ .Site.Params.attorneyName }}</p>
+        <p class="about-title">
+          {{ range $index, $title := .Site.Params.attorneyTitles }}{{ if $index }}<br>{{ end }}{{ $title }}{{ end }}
+        </p>
+      </div>
+
+      <div class="about-content">
+        <p>{{ .Site.Params.aboutIntro }}</p>
+        <p>{{ .Site.Params.aboutParagraph1 }}</p>
+        <p>{{ .Site.Params.aboutParagraph2 }}</p>
+        <p>{{ .Site.Params.aboutParagraph3 }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ===== CONTACT SECTION ===== */}}
+<section id="contact" class="section section-contact">
+  <div class="section-inner">
+    <h2>Contact {{ .Site.Params.firmName }}</h2>
+    
+    <p class="contact-intro">{{ .Site.Params.contactIntro }}</p>
+
+    <div class="contact-details">
+      <div class="contact-item">
+        <strong>Phone</strong>
+        <p>{{ .Site.Params.phone }}</p>
+      </div>
+
+      <div class="contact-item">
+        <strong>Email</strong>
+        <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+      </div>
+
+      <div class="contact-item">
+        <strong>Location</strong>
+        <p>
+          {{ .Site.Params.address.street }}<br>
+          {{ .Site.Params.address.city }}, {{ .Site.Params.address.state }} {{ .Site.Params.address.zip }}
+        </p>
+      </div>
+    </div>
+
+    <p class="contact-disclaimer">
+      <em>{{ .Site.Params.contactDisclaimer }}</em>
+    </p>
+  </div>
+</section>
+
+{{ end }}

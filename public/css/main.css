@@ -42,10 +42,16 @@ body {
 
 
 /* =========================================================
-   NAVIGATION
+   NAVIGATION (Fixed Header)
 ========================================================= */
 
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -74,6 +80,7 @@ body {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .nav a:hover {
@@ -82,37 +89,98 @@ body {
 
 
 /* =========================================================
-   HERO
+   SECTIONS (Single Page Layout)
+========================================================= */
+
+section {
+  scroll-margin-top: var(--header-height);
+}
+
+.section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 48px;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 16px auto 0;
+}
+
+
+/* =========================================================
+   HERO SECTION
 ========================================================= */
 
 .hero-bg {
   position: relative;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
+  padding-top: var(--header-height);
   display: flex;
   align-items: center;
   background-image: url("/images/hero-placeholder.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 .hero-inner {
   position: relative;
+  z-index: 2;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
   color: white;
 }
 
-.hero-inner h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+.hero-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
 
-.hero-inner p {
-  font-size: 1.1rem;
+.hero-box h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.hero-box p {
+  font-size: 1.15rem;
   max-width: 520px;
-  margin-bottom: 32px;
+  margin: 0 auto 2rem;
+  color: #333;
   opacity: 0.95;
 }
 
@@ -123,77 +191,23 @@ body {
   color: var(--primary);
   text-decoration: none;
   font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .cta:hover {
-  background: white;
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   PAGE TITLES & TYPOGRAPHY
+   ABOUT SECTION
 ========================================================= */
 
-.page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-.page p {
-  margin-bottom: 16px;
-}
-
-.page a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.page a:hover {
-  text-decoration: underline;
-}
-
-.page em {
-  display: block;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #555;
-  border-top: 1px solid #e5e5e5;
-  padding-top: 16px;
-}
-
-/* Global page title underline (applies to any H1 in main content) */
-.site-content h1 {
-  text-align: center;
-  color: var(--primary);
-  margin-bottom: 24px;
-  font-size: 2.2rem;
-}
-
-.site-content h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--accent);
-  margin: 16px auto 0;
-}
-
-/* Don't underline the HERO headline */
-.hero-inner h1::after {
-  content: none;
-}
-
-
-
-/* =========================================================
-   ABOUT PAGE (PHOTO LEFT / TEXT RIGHT)
-========================================================= */
-
-.about-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
+.section-about {
+  background: var(--light-gray);
 }
 
 .about-grid {
@@ -214,6 +228,7 @@ body {
   font-weight: 700;
   margin-top: 12px;
   margin-bottom: 4px;
+  color: var(--primary);
 }
 
 .about-title {
@@ -229,29 +244,72 @@ body {
 
 
 /* =========================================================
-   CONTACT PAGE
+   CONTACT SECTION
 ========================================================= */
 
-.contact-info {
-  margin: 32px 0;
+.section-contact {
+  background: #fff;
 }
 
-.contact-info p {
-  margin-bottom: 24px;
+.contact-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: -24px auto 48px;
+  color: #555;
+  font-size: 1.1rem;
 }
 
-.contact-info strong {
+.contact-details {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.contact-item {
+  margin-bottom: 32px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-item strong {
   display: block;
   color: var(--primary);
   margin-bottom: 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-item a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .contact-disclaimer {
-  margin-top: 40px;
+  text-align: center;
   font-size: 0.9rem;
   color: #555;
   border-top: 1px solid #e5e5e5;
-  padding-top: 16px;
+  padding-top: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-disclaimer em {
+  font-style: italic;
 }
 
 
@@ -264,13 +322,13 @@ body {
   text-align: center;
   background: #282828;
   color: white;
-
 }
 
 .footer-logo {
   height: 36px;
   margin-bottom: 12px;
 }
+
 .footer-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -323,67 +381,127 @@ body {
   font-size: 0.8rem;
 }
 
-/* Mobile */
+
+/* =========================================================
+   PAGE TITLES & TYPOGRAPHY (Legacy Support)
+========================================================= */
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.page p {
+  margin-bottom: 16px;
+}
+
+.page a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.page a:hover {
+  text-decoration: underline;
+}
+
+.page em {
+  display: block;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 16px;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
 @media (max-width: 768px) {
+  /* Header */
+  .nav-inner {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .nav a {
+    margin-left: 16px;
+  }
+  
+  .nav a:first-child {
+    margin-left: 0;
+  }
+  
+  /* Hero */
+  .hero-bg {
+    min-height: auto;
+    padding: calc(var(--header-height) + 40px) 20px 60px;
+    background-attachment: scroll;
+  }
+  
+  .hero-box {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero-box h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-box p {
+    font-size: 1rem;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 60px 20px;
+  }
+  
+  .section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+  }
+  
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  
+  .about-content p {
+    text-align: left;
+  }
+  
+  /* Contact */
+  .contact-item {
+    margin-bottom: 28px;
+  }
+  
+  /* Footer */
   .footer-columns {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 }
 
-
-.hero {
-  position: relative;
-  min-height: 75vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Darken background image slightly */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
-}
-
-/* Content container */
-.hero-inner {
-  position: relative;
-  z-index: 2;
-}
-
-/* The actual box */
-.hero-box {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 3rem 4rem;
-  max-width: 720px;
-  border-radius: 6px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-.hero-box h1 {
-  margin-bottom: 1rem;
-}
-
-.hero-box p {
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  .hero-box h1 {
+    font-size: 1.6rem;
   }
-
-  .about-photo {
-    max-width: 260px;
+  
+  .cta {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
   }
 }

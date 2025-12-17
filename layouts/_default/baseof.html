@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Params.firmName }} | {{ .Site.Params.tagline }}</title>
   <style>
     :root {
       --primary: {{ .Site.Params.primaryColor }};
       --accent: {{ .Site.Params.accentColor }};
       --text: {{ .Site.Params.textColor }};
       --light-gray: {{ .Site.Params.lightGray }};
+      --header-height: 88px;
+    }
+    html {
+      scroll-behavior: smooth;
     }
   </style>
   <link rel="stylesheet" href="/css/main.css">
