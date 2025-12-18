@@ -3,11 +3,23 @@ languageCode = "en-us"
 title = "Gunslaw"
 
 [params]
-  # Brand Colors
+  # Brand Colors - Primary Palette
   primaryColor = "#0F172A"
   accentColor  = "#C9B037"
   textColor    = "#1A1A1A"
   lightGray    = "#F6F3E7"
+  
+  # Additional Color Palette
+  bgWhite      = "#FFFFFF"
+  bgDark       = "#2B2B2B"
+  textMuted    = "#555555"
+  textLight    = "#777777"
+  textLightest = "#E5E5E5"
+  borderColor  = "#E5E5E5"
+  borderLight  = "#E6E6E6"
+  borderMedium = "#DDDDDD"
+  shadowColor  = "rgba(0, 0, 0, 0.25)"
+  overlayDark  = "rgba(0, 0, 0, 0.1)"
   
   # Site-wide Branding
   firmName = "Gunslaw"

@@ -11,6 +11,16 @@
       --accent: #C9B037;
       --text: #1A1A1A;
       --light-gray: #F6F3E7;
+      --bg-white: #FFFFFF;
+      --bg-dark: #2B2B2B;
+      --text-muted: #555555;
+      --text-light: #777777;
+      --text-lightest: #E5E5E5;
+      --border-color: #E5E5E5;
+      --border-light: #E6E6E6;
+      --border-medium: #DDDDDD;
+      --shadow-color: ZgotmplZ;
+      --overlay-dark: ZgotmplZ;
       --header-height: 88px;
     }
     html {
@@ -28,9 +38,10 @@
     </a>
 
     <nav class="nav-links">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/attorney">About Jason</a>
     </nav>
   </div>
 </header>
@@ -58,21 +69,28 @@
 
     <div class="about-grid">
       <div class="about-photo">
-        <img
-          src="/images/headshot.jpg"
-          alt="Jason Gunnell – Attorney"
-          loading="lazy"
-        >
-        <p class="about-name">Jason Gunnell</p>
+        
+        <a href="/attorney" class="about-photo-link">
+          <img
+            src="/images/headshot.jpg"
+            alt="Jason Gunnell – Attorney"
+            loading="lazy"
+          >
+        </a>
+        <p class="about-name">
+          <a href="/attorney">
+            Jason Gunnell
+          </a>
+        </p>
         <p class="about-title">
           
             Trial Lawyer
           
-            <br>Staff Judge Advocate, USAF Reserve
-          
         </p>
+        <a href="/attorney" class="cta">
+          Learn About Jason
+        </a>
       </div>
-
       <div class="about-content">
         <!-- About section  -->
 <p>Gunslaw is led by an attorney with extensive experience in public service, prosecution, and military leadership. With a career spanning state and county prosecution, appellate-level advocacy, and service as a commissioned officer in the United States Air Force, the firm brings disciplined judgment, courtroom experience, and a deep understanding of the justice system to every case.</p>
@@ -81,8 +99,10 @@
 <p>Gunslaw approaches each matter with clarity, preparation, and respect for the legal process. The firm is committed to providing straightforward counsel, careful analysis, and effective advocacy for clients throughout Douglas County and surrounding areas.</p>
 
       </div>
+    </div>
   </div>
 </section>
+
 
 
 <section id="contact" class="section section-contact">

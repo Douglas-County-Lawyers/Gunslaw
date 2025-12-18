@@ -11,7 +11,6 @@ ctaLink: "#contact"
 attorneyName: "Jason Gunnell"
 attorneyTitles:
   - "Trial Lawyer"
-  - "Staff Judge Advocate, USAF Reserve"
 
 # Contact Information
 phone: "(123) 456-0000"

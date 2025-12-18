@@ -19,24 +19,35 @@
 
     <div class="about-grid">
       <div class="about-photo">
-        <img
-          src="/images/headshot.jpg"
-          alt="{{ .Params.attorneyName }} – Attorney"
-          loading="lazy"
-        >
-        <p class="about-name">{{ .Params.attorneyName }}</p>
+        <!-- Clickable photo -->
+        <a href="{{ "/attorney" | relURL }}" class="about-photo-link">
+          <img
+            src="/images/headshot.jpg"
+            alt="{{ .Params.attorneyName }} – Attorney"
+            loading="lazy"
+          >
+        </a>
+        <p class="about-name">
+          <a href="{{ "/attorney" | relURL }}">
+            {{ .Params.attorneyName }}
+          </a>
+        </p>
         <p class="about-title">
           {{ range $index, $title := .Params.attorneyTitles }}
             {{ if $index }}<br>{{ end }}{{ $title }}
           {{ end }}
         </p>
+        <a href="{{ "/attorney" | relURL }}" class="cta">
+          Learn About Jason
+        </a>
       </div>
-
       <div class="about-content">
         {{ .Content }}
       </div>
+    </div>
   </div>
 </section>
+
 
 {{/* ===== CONTACT SECTION ===== */}}
 <section id="contact" class="section section-contact">
