@@ -1,0 +1,133 @@
+Gunslaw Website
+
+This repository contains the source code for the Gunslaw website — a clean, professional, single-page law firm site built with Hugo.
+
+The site is designed as a scroll-based layout where navigation links smoothly scroll to sections on the home page rather than loading separate pages. This approach prioritizes clarity, usability, and easy maintenance.
+
+Overview
+
+The website consists of a single long home page with three core sections:
+
+Hero – Primary messaging and call to action
+
+About Us – Firm background and credibility
+
+Contact Us – Direct contact information and consultation details
+
+The navigation bar remains fixed at the top and uses anchor links to scroll to each section.
+
+Tech Stack
+
+Hugo – Static site generator
+
+HTML / CSS – Layout and styling
+
+Config-driven content – Reusable site data stored in config.toml
+
+No JavaScript frameworks – Lightweight, fast, and reliable
+
+Project Structure
+.
+├── content/
+│   └── _index.md        # Single-page home content
+├── layouts/
+│   ├── _default/
+│   │   └── baseof.html  # Base layout
+│   └── index.html       # Main single-page layout
+├── static/
+│   └── images/          # Images and assets
+├── config.toml          # Site-wide configuration and content
+└── README.md
+
+Navigation Behavior
+
+The navigation bar links to sections on the same page using anchor IDs:
+
+Home → #hero
+
+About Us → #about
+
+Contact → #contact
+
+Smooth scrolling is handled via CSS:
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+Offsets are applied to ensure section headers are not hidden behind the fixed navigation bar.
+
+Content Management
+
+All reusable text and values are stored in config.toml, including:
+
+Hero heading and description
+
+Call-to-action text and link
+
+About section content
+
+Contact details (email, phone, address)
+
+This allows site content to be updated without modifying templates.
+
+Local Development
+
+To run the site locally:
+
+hugo server
+
+
+Then visit:
+
+http://localhost:1313
+
+
+Changes will automatically reload in the browser.
+
+Design Principles
+
+Professional, law-firm-appropriate aesthetic
+
+Minimal navigation and cognitive load
+
+High readability over background imagery
+
+Mobile-first and responsive
+
+Easy to maintain and extend
+
+Deployment
+
+The site can be deployed using any static hosting provider, including:
+
+GitHub Pages
+
+Netlify
+
+Cloudflare Pages
+
+Traditional static hosting
+
+After building:
+
+hugo
+
+
+The generated site will be located in the public/ directory.
+
+Future Enhancements (Optional)
+
+SEO schema markup
+
+Accessibility improvements (ARIA, contrast tuning)
+
+Active navigation highlighting
+
+Blog or legal resources section (if needed later)
+
+License
+
+This project is proprietary and intended for use by Gunslaw.
+All rights reserved.
