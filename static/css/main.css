@@ -296,6 +296,23 @@ section {
   background: var(--bg-white);
 }
 
+.about-name {
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--link-color);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+.about-title {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
 .about-content p {
   margin-bottom: 18px;
   max-width: 720px;

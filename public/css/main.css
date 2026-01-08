@@ -296,6 +296,23 @@ section {
   background: var(--bg-white);
 }
 
+.about-name {
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--link-color);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+.about-title {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
 .about-content p {
   margin-bottom: 18px;
   max-width: 720px;
@@ -587,34 +604,4 @@ section {
 
 .btn-primary:hover {
   opacity: 0.9;
-}
-.about-photo-link img {
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.about-photo-link img:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px var(--shadow-color);
-}
-
-.about-name a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.about-name a:hover {
-  text-decoration: underline;
-}
-
-.btn-secondary {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background: var(--accent);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
 }

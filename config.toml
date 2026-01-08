@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://www.gunslaw.com"
 languageCode = "en-us"
 title = "Gunslaw"
 
@@ -20,6 +20,7 @@ title = "Gunslaw"
   borderMedium = "#DDDDDD"
   shadowColor  = "rgba(0, 0, 0, 0.25)"
   overlayDark  = "rgba(0, 0, 0, 0.1)"
+  linkColor    = "#2563EB"
   
   # Site-wide Branding
   firmName = "Gunslaw"

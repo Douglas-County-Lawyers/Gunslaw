@@ -19,27 +19,19 @@
 
     <div class="about-grid">
       <div class="about-photo">
-        <!-- Clickable photo -->
-        <a href="{{ "/attorney" | relURL }}" class="about-photo-link">
-          <img
-            src="/images/headshot.jpg"
-            alt="{{ .Params.attorneyName }} – Attorney"
-            loading="lazy"
-          >
-        </a>
+        <img
+          src="/images/headshot.jpg"
+          alt="{{ .Params.attorneyName }} – Attorney"
+          loading="lazy"
+        >
         <p class="about-name">
-          <a href="{{ "/attorney" | relURL }}">
-            {{ .Params.attorneyName }}
-          </a>
+          {{ .Params.attorneyName }}
         </p>
         <p class="about-title">
           {{ range $index, $title := .Params.attorneyTitles }}
             {{ if $index }}<br>{{ end }}{{ $title }}
           {{ end }}
         </p>
-        <a href="{{ "/attorney" | relURL }}" class="cta">
-          Learn About Jason
-        </a>
       </div>
       <div class="about-content">
         {{ .Content }}
