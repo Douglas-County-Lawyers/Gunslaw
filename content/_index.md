@@ -13,7 +13,7 @@ attorneyTitles:
   - "Trial Lawyer"
 
 # Contact Information
-phone: "(123) 456-0000"
+phone: "(775) 504-4471"
 email: "jason@gunslaw.com"
 contactIntro: "If you would like to discuss a legal matter or schedule a consultation, click the email address below to send us an email, or contact the office using the information provided."
 
@@ -25,7 +25,7 @@ address:
   zip: "89423"
 
 po_box:
-  line: "P.O. Box 1234"
+  line: "1701 County Road, #D"
   city: "Minden"
   state: "NV"
   zip: "89423"
